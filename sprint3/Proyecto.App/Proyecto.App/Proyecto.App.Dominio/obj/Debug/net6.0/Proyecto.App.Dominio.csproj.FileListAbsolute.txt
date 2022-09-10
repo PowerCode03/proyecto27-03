@@ -1,0 +1,12 @@
+C:\proyectocitas\Proyecto.App\Proyecto.App.Dominio\bin\Debug\net6.0\Proyecto.App.Dominio.deps.json
+C:\proyectocitas\Proyecto.App\Proyecto.App.Dominio\bin\Debug\net6.0\Proyecto.App.Dominio.dll
+C:\proyectocitas\Proyecto.App\Proyecto.App.Dominio\bin\Debug\net6.0\Proyecto.App.Dominio.pdb
+C:\proyectocitas\Proyecto.App\Proyecto.App.Dominio\obj\Debug\net6.0\Proyecto.App.Dominio.csproj.AssemblyReference.cache
+C:\proyectocitas\Proyecto.App\Proyecto.App.Dominio\obj\Debug\net6.0\Proyecto.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\proyectocitas\Proyecto.App\Proyecto.App.Dominio\obj\Debug\net6.0\Proyecto.App.Dominio.AssemblyInfoInputs.cache
+C:\proyectocitas\Proyecto.App\Proyecto.App.Dominio\obj\Debug\net6.0\Proyecto.App.Dominio.AssemblyInfo.cs
+C:\proyectocitas\Proyecto.App\Proyecto.App.Dominio\obj\Debug\net6.0\Proyecto.App.Dominio.csproj.CoreCompileInputs.cache
+C:\proyectocitas\Proyecto.App\Proyecto.App.Dominio\obj\Debug\net6.0\Proyecto.App.Dominio.dll
+C:\proyectocitas\Proyecto.App\Proyecto.App.Dominio\obj\Debug\net6.0\refint\Proyecto.App.Dominio.dll
+C:\proyectocitas\Proyecto.App\Proyecto.App.Dominio\obj\Debug\net6.0\Proyecto.App.Dominio.pdb
+C:\proyectocitas\Proyecto.App\Proyecto.App.Dominio\obj\Debug\net6.0\ref\Proyecto.App.Dominio.dll
