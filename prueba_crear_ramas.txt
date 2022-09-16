@@ -1,0 +1,67 @@
+Usuario@DESKTOP-ILGBOH3 MINGW64 /c/Equipo-27-G03 (master)
+$ git brach
+git: 'brach' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+Usuario@DESKTOP-ILGBOH3 MINGW64 /c/Equipo-27-G03 (master)
+$ git branch
+* master
+
+Usuario@DESKTOP-ILGBOH3 MINGW64 /c/Equipo-27-G03 (master)
+$ git branch javier-vargas
+
+Usuario@DESKTOP-ILGBOH3 MINGW64 /c/Equipo-27-G03 (master)
+$ git checkout javier-vargas
+Switched to branch 'javier-vargas'
+
+Usuario@DESKTOP-ILGBOH3 MINGW64 /c/Equipo-27-G03 (javier-vargas)
+$ git add prueba_crear_ramas
+fatal: pathspec 'prueba_crear_ramas' did not match any files
+
+Usuario@DESKTOP-ILGBOH3 MINGW64 /c/Equipo-27-G03 (javier-vargas)
+$ git add prueba_crear_ramas.txt
+
+Usuario@DESKTOP-ILGBOH3 MINGW64 /c/Equipo-27-G03 (javier-vargas)
+$ git commit -m "prueba uso de rama"
+[javier-vargas fc0fcea] prueba uso de rama
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 prueba_crear_ramas.txt
+
+Usuario@DESKTOP-ILGBOH3 MINGW64 /c/Equipo-27-G03 (javier-vargas)
+$ git checkout
+
+Usuario@DESKTOP-ILGBOH3 MINGW64 /c/Equipo-27-G03 (javier-vargas)
+$ git status
+On branch javier-vargas
+nothing to commit, working tree clean
+
+Usuario@DESKTOP-ILGBOH3 MINGW64 /c/Equipo-27-G03 (javier-vargas)
+$ git push
+fatal: The current branch javier-vargas has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin javier-vargas
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Usuario@DESKTOP-ILGBOH3 MINGW64 /c/Equipo-27-G03 (javier-vargas)
+$ git push --set-upstream origin javier-vargas
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 338 bytes | 338.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'javier-vargas' on GitHub by visiting:
+remote:      https://github.com/PowerCode03/proyecto27-03/pull/new/javier-vargas
+remote:
+To https://github.com/PowerCode03/proyecto27-03.git
+ * [new branch]      javier-vargas -> javier-vargas
+branch 'javier-vargas' set up to track 'origin/javier-vargas'.
+
+Usuario@DESKTOP-ILGBOH3 MINGW64 /c/Equipo-27-G03 (javier-vargas)
