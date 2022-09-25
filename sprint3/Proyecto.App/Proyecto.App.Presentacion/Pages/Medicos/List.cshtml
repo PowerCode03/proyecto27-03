@@ -1,0 +1,71 @@
+﻿@page
+@model proyecto.App.Presentacion.Pages.Medicos.ListModel
+@{
+     //var searchString = Model.searchString; 
+     ViewData["Title"] = "Lista de Medicos";
+}
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2><div class="text-info">Lista de Medicos</h2>
+            </div>
+            <div class="col-sm-6">
+                <a asp-page="Crear" class="btn-primary btn-primary">Crear Nuevo Medicos</a>
+            </div>            
+        </div>    
+    </div>
+    <div class="card-body">
+        @if (Model.Medicos.Count() > 0) {
+            <br /><br />
+            <table class="table table-striped border">
+                <tr class="table-secondary">
+                 
+                    <th>@Html.DisplayNameFor(m => m.Medicos.First().N_matriculaPro)</th>
+                    <th>@Html.DisplayNameFor(m => m.Medicos.First().PrimerNombre)</th>
+                    <th>@Html.DisplayNameFor(m => m.Medicos.First().SegundoNombre)</th>
+                    <th>@Html.DisplayNameFor(m => m.Medicos.First().PrimerApellido)</th>
+                    <th>@Html.DisplayNameFor(m => m.Medicos.First().SegundoApellido)</th>
+                    <th>@Html.DisplayNameFor(m => m.Medicos.First().Consultorio)</th>
+                    <th>@Html.DisplayNameFor(m => m.Medicos.First().Especialidad)</th>
+                    
+                
+                    <th>ACCION1</th>
+                    <th>ACCION2</th>
+                    <th>ACCION3</th>
+                </tr>
+                @foreach (var item in Model.Medicos)  {
+                <tr>
+                   
+                    <td>@item.N_matriculaPro</td>
+                    <td>@item.PrimerNombre</td>
+                    <td>@item.SegundoNombre</td>
+                    <td>@item.PrimerApellido</td>
+                    <td>@item.SegundoApellido</td>
+                    <td>@item.Consultorio</td>
+                    <td>@item.Especialidad</td>
+                 
+                    <td>
+                        <a class="btn btn-primary btn-sm" asp-page="./Details" asp-route-Medicos="@item.N_matriculaPro">
+                            Detalle</a>
+                    </td>
+
+                    <td>
+                        <a class="btn btn-primary btn-sm" asp-page="./Edit" asp-route-Medicos="@item.N_matriculaPro">
+                            Editar
+                        </a>
+                    </td> 
+
+                    <td>
+                        <a class="btn btn-danger btn-sm" asp-page="./Delete" asp-route-Medicos="@item.N_matriculaPro">
+                            Eliminar
+                        </a>
+                    </td> 
+                </tr>    }
+            </table>
+        }else{
+            <p>No hay Medicos disponibles</p>
+        }
+    </div>
+</div>
+
