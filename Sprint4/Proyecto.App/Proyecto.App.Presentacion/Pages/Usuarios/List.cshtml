@@ -1,0 +1,95 @@
+﻿@page
+@model Proyecto.App.Presentacion.Pages.Usuarios.ListModel
+@{
+   ViewData["Title"] = "Lista de Usuarios";
+}
+
+
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2><div class="text-info">Lista de Usuarios</h2>
+            </div>
+            <div class="col-sm-3">
+                 <a class="btn btn-primary btn-sm" asp-page="./List">
+                        Listado Completo
+                 </a>
+            </div>
+            <div class="col-sm-3">
+                 <a class="btn btn-primary btn-sm" asp-page="./Crear">
+                        Crear Usuario
+                 </a>
+            </div>               
+        </div>    
+    </div>
+    <div class="card-body">
+        <div>
+            <p>
+            <!--  @Html.ActionLink("Listado Completo", "./List") -->
+            </p>
+
+            @using (Html.BeginForm())
+            {
+                <p>
+                    Buscar por Identificación: @Html.TextBox("SearchString")  
+                    <input type="submit" value="Buscar" />
+                </p>
+            }
+        </div>
+        @if (Model.usuarios.Count() > 0) { 
+            <br /><br />
+            <table class="table table-striped border">
+                <tr class="table-secondary">
+                    <th>@Html.DisplayNameFor(m => m.usuarios.First().id)</th>
+                    <th>@Html.DisplayNameFor(m => m.usuarios.First().IdentificacionU)</th>
+                    <th>@Html.DisplayNameFor(m => m.usuarios.First().PrimerNombreU)</th>
+                    <th>@Html.DisplayNameFor(m => m.usuarios.First().SegundoNombreU )</th>
+                    <th>@Html.DisplayNameFor(m => m.usuarios.First().PrimerApellidoU )</th>
+                    <th>@Html.DisplayNameFor(m => m.usuarios.First().SegundoApellidoU )</th>
+                    <th>@Html.DisplayNameFor(m => m.usuarios.First().TelefonoU)</th>
+                    <th>@Html.DisplayNameFor(m => m.usuarios.First().EmailU)</th>
+                    <th>@Html.DisplayNameFor(m => m.usuarios.First().DireccionU)</th>
+                   
+                    <th colspan=3>ACCIONES</th>
+                </tr>
+                @foreach (var item in Model.usuarios)  {
+                <tr>
+                    <td>@Html.DisplayFor(m => item.id)</td>
+                    <td>@Html.DisplayFor(m => item.IdentificacionU)</td>
+                    <td>@Html.DisplayFor(m => item.PrimerNombreU)</td>
+                    <td>@Html.DisplayFor(m => item.SegundoNombreU)</td>
+                    <td>@Html.DisplayFor(m => item.PrimerApellidoU)</td>
+                    <td>@Html.DisplayFor(m => item.SegundoApellidoU)</td>
+                    <td>@item.TelefonoU</td>
+                    <td>@item.EmailU</td>
+                    <td>@item.DireccionU</td>
+                    
+                    <td>
+                        <a class="btn btn-primary btn-sm" asp-page="./Details" asp-route-usuarioId="@item.id">
+                            Detalle</a>
+                    </td>
+
+                    <td>
+                        <a class="btn btn-success btn-sm" asp-page="./Edit"    asp-route-usuarioId="@item.id">
+                            <i class="bi-pencil-fill"></i>
+                            Editar
+                        </a>
+                    </td> 
+
+                    <td>                                                     
+                        <a class="btn btn-danger btn-sm" asp-page="./Delete"   asp-route-usuarioId="@item.id">
+                            <i class="bi-trash-fill"></i>
+                            Eliminar
+                        </a>
+                    </td> 
+                </tr>    
+            }
+            </table>
+        }else{
+            <p>No hay Usuarios disponibles</p>
+        }
+    </div>
+    </div>
+</div>
+

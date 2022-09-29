@@ -1,0 +1,118 @@
+﻿@page
+@model Proyecto.App.Presentacion.Pages.Usuarios.DetailsModel
+@{
+    ViewData["Title"] = "Detalle Usuario";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h2 class="text-info">Datos del  Usuario</h2>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <div asp-validation-sumary="ModelOnly" class="text-primary">
+                <div class="container" style="padding: 30px">
+                    <!-- se envía campo de la PK oculto -->
+                    <input type="hidden"  asp-for="usuario.id" />
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.IdentificacionU"  class="text-primary"></label>
+                            </div>
+                            <div class="col-sm-3">
+                                @Model.usuario.IdentificacionU;
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.PrimerNombreU"  class=" text-primary"></label>
+                            </div>
+                            <div class="col-sm-6">
+                                @Model.usuario.PrimerNombreU
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.SegundoNombreU"  class=" text-primary"></label>
+                            </div>
+                            <div class="col-sm-6">
+                                @Model.usuario.SegundoNombreU
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.PrimerApellidoU"  class=" text-primary"></label>
+                            </div>
+                            <div class="col-sm-6">
+                                @Model.usuario.PrimerApellidoU
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.SegundoApellidoU"  class=" text-primary"></label>
+                            </div>
+                            <div class="col-sm-6">
+                                @Model.usuario.SegundoApellidoU
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.TelefonoU"  class=" text-primary"></label>
+                            </div>
+                            <div class="col-sm-6">
+                                @Model.usuario.TelefonoU
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.EmailU"  class=" text-primary"></label>
+                            </div>
+                            <div class="col-sm-6">
+                                @Model.usuario.EmailU
+                            </div>
+                        </div>
+                    </div>
+
+                 <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.DireccionU"  class=" text-primary"></label>
+                            </div>
+                            <div class="col-sm-6">
+                                @Model.usuario.DireccionU
+                            </div>
+                        </div>
+                    </div>
+                 
+               
+                  
+                    
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <a asp-page="List" class="btn btn-primary form-control">Volver a la Lista</a>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

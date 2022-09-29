@@ -1,0 +1,66 @@
+﻿@page
+@model proyecto.App.Presentacion.Pages.Acudientes.ListModel
+@{
+     //var searchString = Model.searchString; 
+     ViewData["Title"] = "Lista de Acudientes";
+}
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2><div class="text-info">Lista de Acudientes</h2>
+            </div>
+            <div class="col-sm-6">
+                <a asp-page="Crear" class="btn-primary btn-primary">Crear Nuevo Acudiente</a>
+            </div>            
+        </div>    
+    </div>
+    <div class="card-body">
+        @if (Model.Acudientes.Count() > 0) {
+            <br /><br />
+            <table class="table table-striped border">
+                <tr class="table-secondary">
+                 
+                    <th>@Html.DisplayNameFor(m => m.Acudientes.First().Codigo)</th>
+                    <th>@Html.DisplayNameFor(m => m.Acudientes.First().NombreCompleto)</th>
+                    <th>@Html.DisplayNameFor(m => m.Acudientes.First().Telefono)</th>
+                    <th>@Html.DisplayNameFor(m => m.Acudientes.First().Direccion)</th>
+                    
+                
+                    <th>ACCION1</th>
+                    <th>ACCION2</th>
+                    <th>ACCION3</th>
+                </tr>
+                @foreach (var item in Model.Acudientes)  {
+                <tr>
+                   
+                    <td>@item.Codigo</td>
+                    <td>@item.NombreCompleto</td>
+                    <td>@item.Telefono</td>
+                    <td>@item.Direccion</td>
+                 
+                    <td>
+                        <a class="btn btn-primary btn-sm" asp-page="./Details" asp-route-Acudientes="@item.Codigo">
+                            Detalle</a>
+                    </td>
+
+                    <td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" asp-page="./Edit" asp-route-Acudientes="@item.Codigo">
+                            Editar
+                        </a>
+                    </td> 
+
+                    <td>
+                        <a class="btn btn-danger btn-sm" asp-page="./Delete" asp-route-Acudientes="@item.Codigo">
+                            Eliminar
+                        </a>
+                    </td> 
+                </tr>    }
+            </table>
+        }else{
+            <p>No hay Acudiente disponibles</p>
+        }
+    </div>
+</div>
+
