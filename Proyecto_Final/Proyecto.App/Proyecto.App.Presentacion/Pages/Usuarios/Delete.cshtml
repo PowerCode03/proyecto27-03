@@ -1,0 +1,132 @@
+﻿@page
+@model Proyecto.App.Presentacion.Pages.Usuarios.DeleteModel
+@{
+    ViewData["Title"] = "Eliminar Usuario";
+}
+
+<div class="card" style="background-color:#F57070 ;">
+    <div class="card-header"style="background-color:#262525 ;">
+        <h2 style="color:white ;">Datos del  usuario</h2>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <div asp-validation-sumary="ModelOnly" class="text-danger">
+                <!-- se envía campo de la PK oculto -->
+                <input type="hidden"  asp-for="usuario.id" />
+                <div class="container" style="padding: 30px">
+                    <style>
+                        label{color: black;font-family: Comic Sans MS;}
+                    </style>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.id"  ></label>
+                            </div>
+                            <div class="col-sm-1">
+                                <input asp-for="usuario.id" class="form-control" value = "@Model.usuario.id" disabled />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.IdentificacionU "  ></label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input asp-for="usuario.IdentificacionU " class="form-control" value = "@Model.usuario.IdentificacionU" disabled />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.PrimerNombreU" ></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="usuario.PrimerNombreU" class="form-control" value = "@Model.usuario.PrimerNombreU" disabled />
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.SegundoNombreU"  ></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="usuario.SegundoNombreU" class="form-control" value = "@Model.usuario.SegundoNombreU" disabled />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.PrimerApellidoU "  ></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="usuario.PrimerApellidoU " class="form-control" value = "@Model.usuario.PrimerApellidoU " disabled />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.SegundoApellidoU "  ></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="usuario.SegundoApellidoU " class="form-control" value = "@Model.usuario.SegundoApellidoU " disabled />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.TelefonoU "  ></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="usuario.TelefonoU " class="form-control" value = "@Model.usuario.TelefonoU " disabled />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.EmailU " ></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="usuario.EmailU " class="form-control" value = "@Model.usuario.EmailU " disabled />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.DireccionU "  ></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="usuario.DireccionU " class="form-control" value = "@Model.usuario.DireccionU " disabled />
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2 offset-sm-2"> 
+                                <input type="submit" value="Eliminar" class="btn btn-danger form-control" style="background-color:black ; border-color:black "/>
+                            </div>
+                            <div class="col-sm-4">
+                                <a asp-page="List" class="btn btn-primary form-control">Volver a la Lista</a>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

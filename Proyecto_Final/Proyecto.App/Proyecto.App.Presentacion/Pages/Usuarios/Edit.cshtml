@@ -1,0 +1,143 @@
+﻿@page
+@model Proyecto.App.Presentacion.Pages.Usuarios.EditModel
+@{
+    ViewData["Title"] = "Editar Usuario";
+}
+
+<div class="card"style="background-color:#9EC299">
+    <div class="card-header"style="background-color:#FCD922">
+        <h2 style="color:black">Actualizar usuario</h2>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <div asp-validation-sumary="ModelOnly" class="text-danger">
+                <!-- se envía campo de la PK oculto -->
+                <input type="hidden"  asp-for="usuario.id" />
+                <style>
+                    label{color:black}
+                </style>
+
+                <div class="container" style="padding: 50px">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.id" ></label>
+                            </div>
+                            <div class="col-sm-1">
+                                <input asp-for="usuario.id" class="form-control" value="@Model.usuario.id" disabled />
+                            </div>
+                            <span asp-validation-for="usuario.id" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.IdentificacionU "></label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input asp-for="usuario.IdentificacionU" class="form-control" value=@Model.usuario.IdentificacionU />
+                            </div>
+                            <span asp-validation-for="usuario.IdentificacionU" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.PrimerNombreU" ></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="usuario.PrimerNombreU" class="form-control" value=@Model.usuario.PrimerNombreU />
+                            </div>
+                            <span asp-validation-for="usuario.PrimerNombreU" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                          <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.SegundoNombreU" ></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="usuario.SegundoNombreU" class="form-control" value=@Model.usuario.SegundoNombreU />
+                            </div>
+                            <span asp-validation-for="usuario.SegundoNombreU" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.PrimerApellidoU" ></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="usuario.PrimerApellidoU" class="form-control" value=@Model.usuario.PrimerApellidoU />
+                            </div>
+                            <span asp-validation-for="usuario.PrimerApellidoU" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                     <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.SegundoApellidoU" ></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="usuario.SegundoApellidoU" class="form-control" value=@Model.usuario.SegundoApellidoU />
+                            </div>
+                            <span asp-validation-for="usuario.SegundoApellidoU" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                   <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.TelefonoU" ></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="usuario.TelefonoU" class="form-control" value=@Model.usuario.TelefonoU />
+                            </div>
+                            <span asp-validation-for="usuario.TelefonoU" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                     <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.EmailU"></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="usuario.EmailU" class="form-control" value=@Model.usuario.EmailU />
+                            </div>
+                            <span asp-validation-for="usuario.EmailU" class="text-danger"></span>
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario. DireccionU " ></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="usuario. DireccionU " class="form-control" value=@Model.usuario.DireccionU  />
+                            </div>
+                            <span asp-validation-for="usuario. DireccionU " class="text-danger"></span>
+                        </div>
+                        </div>
+                                     
+                   <br>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2 offset-sm-2"> 
+                                <input type="submit" value="Actualizar" class="btn btn-success form-control" style=" background-color:#309437 " />
+                            </div>
+                            <div class="col-sm-4">
+                                <a asp-page="List" class="btn btn-primary form-control" style=" background-color:black ">Volver a la Lista</a>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

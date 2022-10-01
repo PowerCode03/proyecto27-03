@@ -1,0 +1,76 @@
+﻿@page
+@model Proyecto.App.Presentacion.Medicos.CrearModel
+@{
+    ViewData["Title"] = "Crear Medico";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h2 class="text-info">Crear un nuevo Medico</h2>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <div asp-validation-sumary="ModelOnly" class="text-danger">
+                <div class="container" style="padding: 50px">
+
+                    <div class="med-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="medico.N_matriculaPro"></label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input asp-for="medico.N_matriculaPro" class="acud-control" />
+                            </div>
+                            <span asp-validation-for="medico.N_matriculaPro" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="med-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="medico.NombreCompleto"></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="medico.NombreCompleto" class="acud-control" />
+                            </div>
+                            <span asp-validation-for="medico.NombreCompleto" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="acud-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="medico.Consultorio"></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="Consultorio" asp-for="medico.Consultorio" class="acud-control" />
+                            </div>
+                            <span asp-validation-for="medico.Consultorio" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="med-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="medico.Especialidad"></label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input asp-for="medico.Especialidad" class="acud-control" />
+                            </div>
+                            <span asp-validation-for="medico.Especialidad" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="med-group">
+                        <div class="row">
+                            <div class="col-sm-2 offset-sm-2"> 
+                                <input type="submit" value="Crear" class="btn btn-success acud-control" />
+                            </div>
+                            <div class="col-sm-4">
+                                <a asp-page="List" class="btn btn-primary acud-control">Volver a la Lista</a>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

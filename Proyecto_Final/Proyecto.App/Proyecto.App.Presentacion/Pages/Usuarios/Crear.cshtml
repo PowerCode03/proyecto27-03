@@ -1,0 +1,131 @@
+﻿@page
+@model Proyecto.App.Presentacion.Usuarios.CrearModel
+@{
+    ViewData["Title"] = "Crear Nuevo Usuario";
+}
+
+<div class="card"style="background-color: #91C7C1;">
+    <div class="card-header"style="background-color: #586D96;">
+        <h2 style="color:white; font-size:Arial">Crear un nuevo usuario</h2>
+       
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <div asp-validation-sumary="ModelOnly" class="text-danger">
+                <div class="container" style="padding: 50px; color:black ; font-size=15px ; font-family:arial " >
+
+                     <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.IdentificacionU"></label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input asp-for="usuario.IdentificacionU" class="form-control" />
+                            </div>
+                            <span asp-validation-for="usuario.IdentificacionU" class="text-danger"></span>
+                        </div>
+                    </div>
+                   
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.PrimerNombreU"></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="usuario.PrimerNombreU" class="form-control" />
+                            </div>
+                            <span asp-validation-for="usuario.PrimerNombreU" class="text-danger"></span>
+                        </div>
+                    </div>
+                  
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.SegundoNombreU"></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="usuario.SegundoNombreU" class="form-control" />
+                            </div>
+                            <span asp-validation-for="usuario.SegundoNombreU" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                   
+                     <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.PrimerApellidoU"></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="usuario.PrimerApellidoU" class="form-control" />
+                            </div>
+                            <span asp-validation-for="usuario.PrimerApellidoU" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                   
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.SegundoApellidoU"></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="usuario.SegundoApellidoU" class="form-control" />
+                            </div>
+                            <span asp-validation-for="usuario.SegundoApellidoU" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                  
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.TelefonoU"></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="usuario.TelefonoU" class="form-control" />
+                            </div>
+                            <span asp-validation-for="usuario.TelefonoU" class="text-danger"></span>
+                        </div>
+                </div>
+             
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.EmailU"></label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input asp-for="usuario.EmailU" class="form-control" />
+                            </div>
+                            <span asp-validation-for="usuario.EmailU" class="text-danger"></span>
+                        </div>
+                    </div>
+                   
+                     <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2"> 
+                                <label asp-for="usuario.DireccionU"></label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input asp-for="usuario.DireccionU" class="form-control" />
+                            </div>
+                            <span asp-validation-for="usuario.DireccionU" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-2 offset-sm-2"> 
+                                <input type="submit" value="Crear" class="btn btn-success form-control" style="background-color:#51B947; font-family:arial black" />
+                            </div>
+                            <div class="col-sm-4">
+                                <a asp-page="List" class="btn btn-primary form-control"style="background-color:black">Volver a la Lista de usuario</a>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
